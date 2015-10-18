@@ -1,0 +1,5 @@
+# Build settings
+markdown: kramdown
+baseurl: ""
+port: 4000
+exclude: [dev_assets, node_modules, package.json, gulpfile.js, README.md]

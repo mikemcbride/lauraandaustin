@@ -1,0 +1,142 @@
+/* opinionated reset for form elements that Normalize doesn't cover */
+label {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+input,
+button,
+select,
+textarea {
+  margin: 0;
+  line-height: inherit; /* Normalize sets font-size and font-family to inherit but does not set line-height */
+}
+
+textarea {
+  resize: vertical; /* horizontal resizing can break layout, so restrict it to vertical */
+}
+
+fieldset {
+  min-width: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+.form-group {
+  margin: 1rem 0;
+
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.form-control {
+  width: 100%;
+  line-height: 2rem;
+  padding-left: .5rem;
+  border: 1px solid $gray-mid;
+  border-radius: $xxs;
+  background-color: $white;
+
+  &:focus {
+    outline: none;
+    border-color: $primary-color;
+  }
+
+  & + .btn {
+    margin-left: 0.5rem;
+  }
+}
+
+.radio {
+  position: relative;
+  margin-bottom: $sm;
+  display: block;
+
+  label {
+    margin-bottom: 0;
+    cursor: pointer;
+  }
+
+  input {
+    margin-right: $sm;
+    line-height: 1.5rem;
+  }
+}
+
+.btn {
+  background-color: $primary-color;
+  color: $white;
+  cursor: pointer;
+  border: 1px solid $primary-color;
+  border-radius: $xxs;
+  padding: 0.5rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  transition: all 0.12s ease-in-out;
+
+  &:hover {
+    background-color: color($primary-color tint(10%));
+    border-color: color($primary-color tint(10%));
+  }
+
+  &:focus {
+    outline: none;
+    background-color: color($primary-color shade(10%));
+    border-color: color($primary-color shade(10%));
+  }
+}
+
+.form-group.flex {
+  .form-control {
+    flex-grow: 1;
+    flex-basis: 0%;
+  }
+
+  .btn {
+    flex-basis: auto;
+  }
+}
+
+.alert-box {
+  display: none;
+  position: relative;
+  color: $white;
+  border: 1px solid;
+  border-radius: $xs;
+  padding: 0.5rem 2rem 0.5rem 1rem;
+  width: 100%;
+  line-height: 1.5;
+}
+
+.alert-error {
+  background-color: $red;
+  border-color: $red;
+}
+
+.alert-success {
+  background-color: $green;
+  border-color: $green;
+}
+
+.alert-info {
+  background-color: $blue;
+  border-color: $blue;
+  display: block;
+}
+
+.dismiss-alert {
+  position: absolute;
+  right: 2px;
+  top: 2px;
+  cursor: pointer;
+  padding: 0 0.25rem;
+  color: $white;
+  opacity: 0.5;
+
+  &:hover {
+    opacity: 1;
+  }
+}

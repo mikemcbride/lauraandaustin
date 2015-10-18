@@ -1,0 +1,12 @@
+<section id="about" class="pt-xl pb-md">
+  <div class="container bios">
+    <div class="grid-row with-gutters stacked-mobile">
+      {% for person in site.data.about.people %}
+        <div class="grid-col">
+          <h1 class="title">{{ person.name }}</h1>
+          {{ person.info }}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,96 @@
+.separator {
+  background-size: cover;
+  background-position: center;
+  height: 50vh;
+  background-color: rgba(0,0,0,0.1);
+  background-blend-mode: multiply;
+}
+
+.section-1 {
+  background-image: url(../img/section1.jpg);
+}
+.section-2 {
+  background-image: url(../img/section2.jpg);
+}
+.section-3 {
+  background-image: url(../img/section3.jpg);
+}
+.section-4 {
+  background-image: url(../img/section4.jpg);
+}
+.section-5 {
+  background-image: url(../img/section5.jpg);
+}
+.section-6 {
+  background-image: url(../img/section6.jpg);
+}
+.section-7 {
+  background-image: url(../img/section7.jpg);
+}
+
+.title {
+  color: $blue;
+  text-transform: uppercase;
+  border-bottom: 1px solid;
+  font-weight: 700;
+  font-family: "Montserrat", $sans-serif-font;
+  margin-bottom: $md;
+  padding: 0;
+}
+
+.bios .title {
+  padding-left: $sm;
+}
+
+.welcome-message {
+  text-align: justify;
+}
+
+
+.col-with-photo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  @media (--bp-laptop) {
+    flex-direction: row;
+  }
+}
+
+.col-photo {
+  flex-grow: 1;
+  align-self: center;
+  text-align: center;
+  padding: $md;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+
+  img {
+    object-fit: cover;
+    width: 100%;
+  }
+
+  @media (--bp-laptop) {
+    flex-grow: 0;
+    flex-shrink: 0;
+    align-self: flex-start;
+    width: 250px;
+  }
+}
+
+.col-content {
+  display: block;
+  width: 100%;
+  flex-grow: 1;
+  padding: $md;
+
+  @media (--bp-laptop) {
+    width: auto;
+  }
+}
+
+.registry-img {
+  width: 100%;
+}

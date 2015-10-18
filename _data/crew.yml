@@ -1,0 +1,18 @@
+# -------------------------------------
+# Crew
+
+bridesmaids:
+  - {name: "Michaela Ward", img: "assets/img/placeholder-user.png", bio: "College friend/frisbee teammate/classmate of the bride. \"She's just a big dumb animal folks.\""}
+  - {name: "Colleen Matthews", img: "assets/img/placeholder-user.png", bio: "Roommate/frisbee teammate of the bride."}
+  - {name: "Carly Lange", img: "assets/img/placeholder-user.png", bio: "Grade school friend and biking buddy of the bride. Wait, Laura has friends outside of frisbee?"}
+  - {name: "Kathleen Horton", img: "assets/img/placeholder-user.png", bio: "College friend/frisbee teammate of the bride."}
+  - {name: "Erin Carroll", img: "assets/img/placeholder-user.png", bio: "College friend/frisbee teammate of the bride."}
+  - {name: "Cameron Sisler", img: "assets/img/placeholder-user.png", bio: "College friend/roommate/frisbee teammate of the bride."}
+
+groomsmen:
+  - {name: "Sean Reed", img: "assets/img/placeholder-user.png", bio: "Brother of the groom. Secret copy cat of the groom."}
+  - {name: "Winn Haynes", img: "assets/img/placeholder-user.png", bio: "High school friend/twin of the groom. Was often confused for the groom during their high school days."}
+  - {name: "David Shields", img: "assets/img/placeholder-user.png", bio: "College friend/frisbee teammate of the groom. Convinced the groom to move to Texas. No regrets either way."}
+  - {name: "Andy Murtha", img: "assets/img/placeholder-user.png", bio: "College roommate/friend of the groom. \"It is all Theo-Bot's fault.\""}
+  - {name: "John Murphy", img: "assets/img/placeholder-user.png", bio: "College friend/frisbee teammate of the groom. Gets very uncomfortable if your hug lingers."}
+  - {name: "Max Morgan", img: "assets/img/placeholder-user.png", bio: "College friend/frisbee co-captain of the groom. Someone put them in charge... it could have gone worse."}

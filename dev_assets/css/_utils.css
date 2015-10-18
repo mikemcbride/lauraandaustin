@@ -1,0 +1,116 @@
+.pointer {
+  cursor: pointer;
+}
+
+.font-smoothing {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+.truncate {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.flex {
+  display: flex;
+}
+
+.fg-1 {
+  flex-grow: 1;
+}
+
+.fb-a {
+  flex-basis: auto;
+}
+
+.centered {
+  text-align: center !important;
+}
+
+.borderless {
+  border: none !important;
+}
+
+/* make things stack on mobile but go horizontal on laptop and larger. super common pattern. use it a lot on the grid. */
+.stacked-mobile {
+  display: block;
+  flex-direction: column;
+
+  @media (min-width: $bp-md) {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+/* responsive fixed-width container element */
+.container {
+  padding-right: $md;
+  padding-left: $md;
+  margin-right: auto;
+  margin-left: auto;
+
+  @media (--bp-md) {
+    width: 45rem;
+  }
+
+  @media (--bp-lg) {
+    width: 55rem;
+  }
+
+  @media (--bp-xl) {
+    width: 70rem;
+  }
+}
+
+/**
+ * The New Micro Clearfix
+ */
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table;
+}
+.cf:after { clear: both; }
+
+
+.font-med { font-size: 1.5rem; }
+
+.pull-right { float: right; }
+.pull-left { float: left; }
+
+// font weights
+.fw-100 { font-weight: 100; }
+.fw-300 { font-weight: 300; }
+.fw-400 { font-weight: 400; }
+.fw-700 { font-weight: 700; }
+
+.spinner {
+  display: none;
+  width: 30px;
+  height: 30px;
+  margin: 0 auto;
+  border-radius: 50%;
+  border-top: 3px solid transparent;
+  border-left: 3px solid $blue;
+  border-bottom: 3px solid transparent;
+  border-right: 3px solid $blue;
+  z-index: 2;
+  animation-name: rotation;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+/* rotation keyframe for spinner animations */
+@-webkit-keyframes rotation {
+  to { transform: rotate(360deg) }
+}
+@-moz-keyframes rotation {
+  to { transform: rotate(360deg) }
+}
+@-o-keyframes rotation {
+  to { transform: rotate(360deg) }
+}

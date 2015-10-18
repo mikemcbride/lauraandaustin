@@ -1,0 +1,29 @@
+.member {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: $md;
+}
+
+.member-photo {
+  height: $xl;
+  width: $xl;
+  object-fit: cover;
+  margin: $xs;
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+
+.member-info {
+  margin: $xs $sm;
+}
+
+.member-name {
+  font-size: 1.5rem;
+  color: $gray-dark;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.member-bio {
+  color: $gray-dark;
+}

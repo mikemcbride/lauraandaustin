@@ -1,0 +1,77 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px; /* set here so we can use "rem" units */
+  font-family: $sans-serif-font;
+  font-weight: 400;
+  color: $textColorMain;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* fix stupid iOS input shadows */
+@media (max-width: $bp-md) {
+  input[type="text"], input[type="email"], input[type="search"], input[type="password"] {
+  	-webkit-appearance: none;
+  	-moz-appearance: none;
+  }
+}
+
+p {
+  margin: 0;
+  margin-bottom: $md;
+  line-height: 1.75;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: $primary-color;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:visited {
+    color: $primary-color;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  font-family: "Montserrat", $sans-serif-font;
+}
+
+h1 { font-size: 2.125rem; }
+h2 { font-size: 1.6875rem; }
+h3 { font-size: 1.375rem; }
+h4 { font-size: 1.125rem; }
+h5 { font-size: 1.125rem; }
+h6 { font-size: 1rem; }
+
+@media (--bp-laptop) {
+  h1, h2, h3, h4, h5, h6 { line-height: 1.4; }
+  h1 { font-size: 2.75rem; }
+  h2 { font-size: 2.3125rem; }
+  h3 { font-size: 1.6875rem; }
+  h4 { font-size: 1.4375rem; }
+  h5 { font-size: 1.125rem; }
+  h6 { font-size: 1rem; }
+}

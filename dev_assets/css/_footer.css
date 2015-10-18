@@ -1,0 +1,7 @@
+footer {
+  background-color: #313437;
+  color: $white;
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 5rem 0;
+}

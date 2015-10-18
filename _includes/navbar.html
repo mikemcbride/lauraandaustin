@@ -1,0 +1,12 @@
+<nav class="navbar">
+  <div class="mobile-nav">
+    <span class="nav-title">{{ site.data.settings.title }}</span>
+    <span id="menuToggle" class="nav-bars pointer"><i class="fa fa-bars"></i></span>
+  </div>
+
+  <div id="navMenu" class="nav-items">
+    {% for item in site.data.menu.items %}
+      <a class="nav-item pointer" href="{{ item.url }}">{{ item.name }}</a>
+    {% endfor %}
+  </div>
+</nav>

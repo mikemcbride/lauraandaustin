@@ -1,0 +1,54 @@
+.banner {
+  background-image: url(../img/banner.jpg);
+  background-size: cover;
+  background-position: center;
+  background-color: rgba(0,0,0,0.5);
+  background-blend-mode: multiply;
+  height: 100vh;
+  position: relative;
+}
+
+.logo {
+  color: $white;
+  position: relative;
+  margin: 0 auto;
+  top: 25vh;
+  max-width: 450px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding: $lg $xl;
+  border-radius: $sm;
+  border: 2px solid;
+}
+
+.logo-title {
+  font-size: 2.5rem;
+  font-family: "Montserrat", $sans-serif-font;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @media(--bp-md) {
+    flex-direction: row;
+  }
+}
+
+.logo-subtitle {
+  font-family: Cookie;
+  font-size: 2rem;
+}
+
+#countdown {
+  position: absolute;
+  bottom: 15vh;
+  left: 0;
+  right: 0;
+  text-shadow: 0 0 5px rgba(0,0,0,0.5);
+  color: $white;
+  font-weight: bold;
+  font-size: $lg;
+  text-transform: uppercase;
+}

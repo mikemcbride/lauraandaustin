@@ -1,0 +1,27 @@
+<div class="separator mt-lg section-5"></div>
+
+<section id="attractions" class="pt-xl pb-md">
+  <h1 class="title centered borderless mb-lg">Attractions</h1>
+  <div class="container">
+    <p>The Dallas/Fort Worth area has TONS of awesome stuff to do. If you have some free time while you're in town, here are some things we suggest checking out:</p>
+
+    {% for place in site.data.attractions.places %}
+      <div class="col-with-photo">
+        <div class="col-photo">
+          <img src="http://placehold.it/250x250">
+        </div>
+        <div class="col-content">
+          <h3 class="title">{{ place.name }}</h3>
+          <p>{{ place.street }}</p>
+          <p>{{ place.city }}</p>
+          <p><a href="tel:{{ place.telephone }}">{{ place.telephone }}</a></p>
+          {% if place.url %}
+            <p><a href="{{ place.url }}">Website</a></p>
+          {% endif %}
+          <p><a href="{{ place.map }}">Get directions</a></p>
+        </div>
+      </div>
+    {% endfor %}
+
+  </div>
+</section>

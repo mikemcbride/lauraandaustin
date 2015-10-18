@@ -1,0 +1,54 @@
+/* colors
+-------------------------------------*/
+$white: #fff;
+$gray-light: #f5f5f7;
+$gray-mid: #c9c9c9;
+$gray-dark: #757575;
+$near-black: #212121;
+$light-blue: #74C9F3;
+$blue: #5298fc;
+$red: #db4437;
+$green: #0f9d58;
+
+$primary-color: $blue;
+$textColorMain: $near-black;
+
+$serif-font: serif;
+$sans-serif-font: "Open Sans", ".SFNSText-Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+/* Responsive Breakpoints (at 16px base font)
+-------------------------------------------------------- */
+$bp-xs: 30rem;    /* 480px */
+$bp-sm: 37.5rem;  /* 600px */
+$bp-md: 50rem;    /* 800px */
+$bp-lg: 61.25rem; /* 980px */
+$bp-xl: 75rem;    /* 1200px */
+
+/* custom media queries */
+@custom-media --bp-xs (min-width: $bp-xs);
+@custom-media --bp-sm (min-width: $bp-sm);
+@custom-media --bp-md (min-width: $bp-md);
+@custom-media --bp-lg (min-width: $bp-lg);
+@custom-media --bp-xl (min-width: $bp-xl);
+
+/* user-friendly naming conventions, if you prefer this */
+$bp-phone: $bp-xs;
+$bp-phablet: $bp-sm;
+$bp-tablet: $bp-md;
+$bp-laptop: $bp-lg;
+$bp-desktop: $bp-xl;
+
+@custom-media --bp-phone (min-width: $bp-phone);
+@custom-media --bp-phablet (min-width: $bp-phablet);
+@custom-media --bp-tablet (min-width: $bp-tablet);
+@custom-media --bp-laptop (min-width: $bp-laptop);
+@custom-media --bp-desktop (min-width: $bp-desktop);
+
+/* scale
+-------------------------------------*/
+$xxs: 0.125rem;
+$xs: 0.25rem;
+$sm: 0.5rem;
+$md: 1rem;
+$lg: 2rem;
+$xl: 4rem;

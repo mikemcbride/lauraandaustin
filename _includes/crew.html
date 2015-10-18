@@ -1,0 +1,36 @@
+<div class="separator mt-lg section-1"></div>
+
+<section id="crew" class="pt-xl pb-md">
+  <h1 class="title centered borderless mb-lg">Our "I Do" Crew</h1>
+  <div class="container">
+    <p>
+      The wedding party! We wouldn't be here without these awesome people, so you should get to know them!
+    </p>
+    <div class="grid-row with-gutters stacked-mobile">
+      <div class="grid-col">
+        <h2 class="title">The Bridesmaids</h2>
+        {% for bm in site.data.crew.bridesmaids %}
+          <div class="member">
+            <img src="{{ bm.img }}" class="member-photo"></img>
+            <div class="member-info">
+              <h2 class="member-name mb-0">{{ bm.name }}</h2>
+              <div class="member-bio">{{ bm.bio }}</div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+      <div class="grid-col">
+        <h2 class="title">The Groomsmen</h2>
+        {% for gm in site.data.crew.groomsmen %}
+          <div class="member">
+            <img src="{{ gm.img }}" class="member-photo"></img>
+            <div class="member-info">
+              <h2 class="member-name mb-0">{{ gm.name }}</h2>
+              <div class="member-bio">{{ gm.bio }}</div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>

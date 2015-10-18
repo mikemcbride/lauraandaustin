@@ -1,0 +1,41 @@
+{
+  "name": "lauraandaustin",
+  "version": "1.0.0",
+  "description": "Wedding website of Laura Kelly and Austin Reed",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/mmcbride1007/lauraandaustin"
+  },
+  "author": "Mike McBride (@mmcbride1007)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mmcbride1007/lauraandaustin/issues"
+  },
+  "homepage": "www.lauraandaustin.com",
+  "devDependencies": {
+    "autoprefixer": "5.2.0",
+    "cssnext": "1.8.3",
+    "del": "1.2.1",
+    "gulp": "3.9.0",
+    "gulp-concat": "2.6.0",
+    "gulp-imagemin": "^2.3.0",
+    "gulp-minify-css": "1.2.0",
+    "gulp-postcss": "5.1.10",
+    "gulp-rename": "1.2.2",
+    "gulp-uglify": "1.2.0",
+    "gulp-util": "3.0.6",
+    "imagemin-pngquant": "^4.1.0",
+    "postcss-calc": "4.1.0",
+    "postcss-color-function": "1.3.2",
+    "postcss-custom-media": "4.1.0",
+    "postcss-import": "6.2.0",
+    "postcss-mixins": "0.4.0",
+    "postcss-nested": "0.3.2",
+    "postcss-normalize": "0.1.1",
+    "postcss-simple-vars": "0.3.0"
+  }
+}
