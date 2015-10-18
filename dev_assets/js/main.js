@@ -10,15 +10,6 @@ $(document).ready(function() {
     $('body').removeClass('show-nav');
   });
 
-  // rsvp form fields
-  $('input[type=radio][name=attendance]').change(function() {
-    if (this.value == 'yes') {
-      $('#form-guests').show();
-    } else if (this.value == 'no') {
-      $('#form-guests').hide();
-    }
-  });
-
   // get the countdown!
   $('#countdown').html(getMessage());
 
