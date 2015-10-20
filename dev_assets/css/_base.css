@@ -33,7 +33,6 @@
   text-transform: uppercase;
   border-bottom: 1px solid;
   font-weight: 700;
-  font-family: "Montserrat", $sans-serif-font;
   margin-bottom: $md;
   padding: 0;
 }
