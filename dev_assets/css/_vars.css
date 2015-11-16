@@ -14,7 +14,7 @@ $primary-color: $blue;
 $textColorMain: $near-black;
 
 $serif-font: serif;
-$sans-serif-font: "Proxima Nova", ".SFNSText-Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$sans-serif-font: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 /* Responsive Breakpoints (at 16px base font)
 -------------------------------------------------------- */
