@@ -8,7 +8,7 @@
     {% for place in site.data.attractions.places %}
       <div class="col-with-photo">
         <div class="col-photo">
-          <img src="http://placehold.it/250x250">
+          <img src="{{ place.img }}">
         </div>
         <div class="col-content">
           <h3 class="title">{{ place.name }}</h3>
