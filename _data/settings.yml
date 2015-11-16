@@ -7,3 +7,10 @@ description: Wedding website of Laura Kelly and Austin Reed
 # Welcome message
 
 welcome_message: "Welcome to our wedding website! Austin and I very are very excited and thankful to be able to celebrate our wedding day with each and every one of you. We could not have gotten here today without the love and support of such wonderful friends and family. Hopefully, this website will give you helpful information for our special day. 6/11/16 is around the corner... can't wait to share it with y'all!"
+
+
+# -------------------------------------
+# Links
+
+ceremony_directions: "https://www.google.com/maps/dir/''/4200+Camp+Bowie+Blvd,+Fort+Worth,+TX+76107/data=!4m5!4m4!1m0!1m2!1m1!1s0x864e73bc775569d5:0x5c2788d6068ed7c1?sa=X&ved=0CB4QwwUwAGoVChMI54bFmYiWyQIVBNVjCh0kwg84"
+reception_directions: "https://www.google.com/maps/dir//809+at+Vickery,+809+W+Vickery+Blvd,+Fort+Worth,+TX+76104/@32.7432699,-97.3357623,17z/data=!4m13!1m4!3m3!1s0x864e716c4cf49d9b:0x4444b24ed848ba9f!2s809+at+Vickery!3b1!4m7!1m0!1m5!1m1!1s0x864e716c4cf49d9b:0x4444b24ed848ba9f!2m2!1d-97.3335736!2d32.7432699"
