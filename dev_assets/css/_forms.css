@@ -1,7 +1,7 @@
 /* opinionated reset for form elements that Normalize doesn't cover */
 label {
   display: inline-block;
-  margin-bottom: 0.5rem;
+  margin-bottom: $sm;
 }
 
 input,
@@ -24,19 +24,19 @@ fieldset {
 }
 
 .form-group {
-  margin: 1rem 0;
+  margin: $md 0;
 
   label {
     display: block;
-    margin-bottom: 0.5rem;
+    margin-bottom: $sm;
   }
 }
 
 .form-control {
   width: 100%;
-  line-height: 2rem;
-  padding-left: .5rem;
-  border: 1px solid $gray-mid;
+  line-height: $lg;
+  padding-left: $sm;
+  border: 2px solid $gray-mid;
   border-radius: $xxs;
   background-color: $white;
 
@@ -46,7 +46,7 @@ fieldset {
   }
 
   & + .btn {
-    margin-left: 0.5rem;
+    margin-left: $sm;
   }
 }
 
@@ -70,9 +70,9 @@ fieldset {
   background-color: $primary-color;
   color: $white;
   cursor: pointer;
-  border: 1px solid $primary-color;
+  border: 2px solid $primary-color;
   border-radius: $xxs;
-  padding: 0.5rem;
+  padding: $sm;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   transition: all 0.12s ease-in-out;
@@ -106,7 +106,7 @@ fieldset {
   color: $white;
   border: 1px solid;
   border-radius: $xs;
-  padding: 0.5rem 2rem 0.5rem 1rem;
+  padding: $sm $lg $sm $md;
   width: 100%;
   line-height: 1.5;
 }
@@ -132,7 +132,7 @@ fieldset {
   right: 2px;
   top: 2px;
   cursor: pointer;
-  padding: 0 0.25rem;
+  padding: 0 $xs;
   color: $white;
   opacity: 0.5;
 

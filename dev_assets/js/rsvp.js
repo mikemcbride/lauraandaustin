@@ -22,6 +22,29 @@ $(document).ready(function() {
     $(this).parent().hide();
   });
 
+  $('#guest_info').on('click', ".radio", function() {
+    var personId = $(this).attr('data-person-id');
+
+    if ($(this).attr('data-question') == "attendance") {
+
+      if ($("input[name='" + personId + "_attendance']:checked").val() == "true") {
+        try {
+          $('#' + personId + '_guest_info').show();
+        } catch (e) {}
+      } else {
+        try {
+          $('#' + personId + '_guest_info').hide();
+        } catch (e) {}
+      }
+    } else if ($(this).attr('data-question') == "guest_attendance") {
+
+      if ($("input[name='" + personId + "_guest_attendance']:checked").val() == "true") {
+        $('#' + personId + '_guest_name_section').show();
+      } else {
+        $('#' + personId + '_guest_name_section').hide();
+      }
+    }
+  });
 
   /* Functions to build our data */
   function getGuests(code) {
@@ -69,32 +92,34 @@ $(document).ready(function() {
       }
 
       html +='<fieldset id="' + person.objectId + '" class="my-md">' +
-                '<div class="radio">' +
+                '<div class="radio" data-question="attendance" data-person-id="' + person.objectId + '">' +
                   '<label>' +
                     '<input type="radio" name="' + person.objectId + '_attendance" id="' + person.objectId + '_attendanceRadio1" value="true" checked>I wouldn\'t miss it!' +
                   '</label>' +
                 '</div>' +
-                '<div class="radio">' +
+                '<div class="radio" data-question="attendance" data-person-id="' + person.objectId + '">' +
                   '<label>' +
                     '<input type="radio" name="' + person.objectId + '_attendance" id="' + person.objectId + '_attendanceRadio2" value="false">Unfortunately cannot make it' +
                   '</label>' +
                 '</div>';
 
       if (person.gets_guest == true) {
-        html += '<p>Will you be bringing a guest?</p>' +
-                '<div class="radio">' +
-                  '<label>' +
-                    '<input type="radio" name="' + person.objectId + '_guest_attendance" id="' + person.objectId + '_guestAttendanceRadio1" value="true" checked>Yes, I am bringing a guest' +
-                  '</label>' +
-                '</div>' +
-                '<div class="radio">' +
-                  '<label>' +
-                    '<input type="radio" name="' + person.objectId + '_guest_attendance" id="' + person.objectId + '_guestAttendanceRadio2" value="false">No, it will just be me' +
-                  '</label>' +
-                '</div>' +
-                '<div class="form-group">' +
-                  '<label>Guest name</label>' +
-                  '<input type="text" id="' + person.objectId + '_guest_name" class="form-control" placeholder="First and last name">'
+        html += '<div id="' + person.objectId + '_guest_info">' +
+                '<h4 class="mb-md">Will you be bringing a guest?</h4>' +
+                  '<div class="radio" data-question="guest_attendance" data-person-id="' + person.objectId + '">' +
+                    '<label>' +
+                      '<input type="radio" name="' + person.objectId + '_guest_attendance" id="' + person.objectId + '_guestAttendanceRadio1" value="true" checked>Yes, I am bringing a guest' +
+                    '</label>' +
+                  '</div>' +
+                  '<div class="radio" data-question="guest_attendance" data-person-id="' + person.objectId + '">' +
+                    '<label>' +
+                      '<input type="radio" name="' + person.objectId + '_guest_attendance" id="' + person.objectId + '_guestAttendanceRadio2" value="false">No, it will just be me' +
+                    '</label>' +
+                  '</div>' +
+                  '<div class="form-group" id="' + person.objectId + '_guest_name_section">' +
+                    '<label>Guest name</label>' +
+                    '<input type="text" id="' + person.objectId + '_guest_name" data-question="guest_name" data-person-id="' + person.objectId + '" class="form-control" placeholder="First and last name">'
+                  '</div>'
                 '</div>';
       }
 
@@ -124,8 +149,14 @@ $(document).ready(function() {
 
       res.set("responded", obj.responded);
       res.set("attending", obj.attending);
-      res.set("guest_attending", obj.guest_attending);
-      res.set("guest_name", obj.guest_name);
+
+      if (obj.attending == true) {
+        res.set("guest_attending", obj.guest_attending);
+        res.set("guest_name", obj.guest_name);
+      } else {
+        res.set("guest_attending", false);
+        res.set("guest_name", "");
+      }
 
       res.save(null, {
         success: function(res) {},
