@@ -172,8 +172,6 @@ $(document).ready(function() {
       $('#error_submitting').show();
     } else {
       $('#success_message').show();
-      $('#rsvp_code').val('');
-      $('#code_group').show();
     }
   }
 
