@@ -6,13 +6,13 @@
     <p class="centered">Here is some information about where you can stay while you're in town for the wedding.</p>
     <div class="col-with-photo">
       <div class="col-photo">
-        <img src="http://placehold.it/250x250">
+        <img src="assets/img/hotel.jpg">
       </div>
       <div class="col-content">
-        <h3 class="title">Some Hotel</h3>
-        <p class="mb-0">123 Main Street</p>
-        <p>Fort Worth, TX 76104</p>
-        <p><a href="#">Get directions</a></p>
+        <h3 class="title">{{ site.data.hotel.venue }}</h3>
+        <p class="mb-0">{{ site.data.hotel.address_1 }}</p>
+        <p>{{ site.data.hotel.address_2 }}</p>
+        <p><a href="{{ site.data.hotel.directions }}">Get directions</a></p>
       </div>
     </div>
   </div>
