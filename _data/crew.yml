@@ -3,11 +3,11 @@
 
 bridesmaids:
   - {name: "Michaela Ward - Maid of Honor", img: "assets/img/Michaela.jpg", bio: "College friend/frisbee teammate/classmate of the bride. Partner in crime and Wayne to her Garth."}
-  - {name: "Colleen Mathews", img: "assets/img/Colleen.jpg", bio: "Roommate/frisbee teammate of the bride."}
+  - {name: "Colleen Mathews", img: "assets/img/Colleen.jpg", bio: "College friend/roommate/frisbee teammate of bride. Loves dogs and long embraces."}
   - {name: "Carly Lange", img: "assets/img/Carly.jpg", bio: "Grade school friend and biking buddy of the bride. Wait, Laura has friends outside of frisbee?"}
-  - {name: "Kathleen Horton", img: "assets/img/Horton.jpg", bio: "College friend/frisbee teammate of the bride."}
-  - {name: "Erin Carroll", img: "assets/img/Erin.jpg", bio: "College friend/frisbee teammate of the bride."}
-  - {name: "Cameron Sisler", img: "assets/img/Cam.jpg", bio: "College friend/roommate/frisbee teammate of the bride."}
+  - {name: "Kathleen Horton", img: "assets/img/Horton.jpg", bio: "College friend/frisbee teammate of bride. Improv comedian and co-founder of the \"W\". Go Bills."}
+  - {name: "Erin Carroll", img: "assets/img/Erin.jpg", bio: "College friend/frisbee teammate of bride. Seattleite and humantarian... so basically a hipster."}
+  - {name: "Cameron Sisler", img: "assets/img/Cam.jpg", bio: "College friend/roommate/frisbee teammate of bride. Master of cooking and all things crunchy."}
 
 groomsmen:
   - {name: "Sean Reed - Best Man", img: "assets/img/Sean.jpg", bio: "Brother of the groom. Secret copy cat of the groom."}
