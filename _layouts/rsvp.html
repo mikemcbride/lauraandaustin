@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  {% include head.html %}
+
+  <body class="font-smoothing">
+
+    {{ content }}
+
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="assets/js/main.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        // initialize the Parse object
+        Parse.initialize("esgwG6h6b8YLjQiri6Hm1srCP0xuVtxUKWVQcFpK", "OtnuwfSEMtOsfAVlpzKQVlhzUlv5ZKgNZ2H7eNS1");
+        getAllResponses();
+
+        // Functions
+        // ======================================
+        function getAllResponses () {
+          var Reservation = Parse.Object.extend("Reservation");
+          var query = new Parse.Query(Reservation);
+          query.find({
+            success: function(results) {
+              populateRsvpTable(results);
+            },
+            error: function(error) {
+              alert('Something went wrong trying to get the data.');
+            }
+          });
+        }
+
+        function populateRsvpTable (results) {
+          results.forEach(function(result) {
+            var person = {
+              "first_name": result.get('first_name'),
+              "last_name": result.get('last_name'),
+              "responded": result.get('responded'),
+              "attending": result.get('attending'),
+              "gets_guest": result.get('gets_guest'),
+              "guest_name": result.get('guest_name'),
+              "guest_attending": result.get('guest_attending'),
+              "objectId": result.id
+            };
+            var newRow = '<tr>' +
+                           '<td>' + person.first_name + '</td>' +
+                           '<td>' + person.last_name + '</td>' +
+                           '<td>' + person.responded + '</td>' +
+                           '<td>' + person.attending + '</td>' +
+                           '<td>' + person.gets_guest + '</td>' +
+                           '<td>' + person.guest_attending + '</td>' +
+                           '<td>' + person.guest_name + '</td>' +
+                         '</tr>';
+            $('#rsvp-table-body').append(newRow);
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
