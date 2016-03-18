@@ -20,7 +20,7 @@
         function getAllResponses () {
           var Reservation = Parse.Object.extend("Reservation");
           var query = new Parse.Query(Reservation);
-          query.find({
+          query.limit(1000).find({
             success: function(results) {
               populateRsvpTable(results);
             },
